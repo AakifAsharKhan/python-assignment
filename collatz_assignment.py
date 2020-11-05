@@ -9,9 +9,11 @@ def collatz(number):
         return int(number)
     else:
         return number
-
-number = int(input("Enter the integer"))
-some_number = number
+try:
+    number = int(input("Enter the integer"))
+    some_number = number
+except:
+    print("enter a integer")
 while(True):
     some_number = collatz(some_number)
     if some_number == 1:
