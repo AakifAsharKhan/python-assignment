@@ -11,10 +11,9 @@ def collatz(number):
         return number
 try:
     number = int(input("Enter the integer"))
-    some_number = number
 except:
     print("enter a integer")
 while(True):
-    some_number = collatz(some_number)
-    if some_number == 1:
+    number = collatz(number)
+    if number == 1 or number == 0:
         break
