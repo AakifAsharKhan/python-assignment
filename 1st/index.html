@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        margin-top: 20px;
+        margin-left: 40%;
+        margin-right: 25%;
+        border-spacing: 0px;
+        border: 1px black solid;
+        background-color: lavender;
+        font-size: 1.15em;
+    }
+
+    td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    caption {
+        font-size: 1.25em;
+        background-color: black;
+        color: white;
+        padding: 2px;
+    }
+
+    tfoot {
+        font-size: 0.75em;
+    }
+
+    .form-class {
+        display: block;
+        margin: auto;
+        width: 23%;
+        margin-top: 25px;
+        padding: 0px;
+        font-size: large;
+        
+    }
+
+    fieldset {
+        display: inline-block;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: turquoise;
+        border-radius: 10%;
+    }
+
+    legend {
+        padding: 15px;
+        margin: 0%;
+        padding: 0%;
+    }
+    #submit{
+        margin-left: 40%;
+        /* margin-right: 50%; */
+        margin-top: 15px;
+
+    }
+</style>
+
+<body>
+    <table>
+        <caption>August 2021</caption>
+        <thead>
+            <tr>
+                <td>Mon</td>
+                <td>Tues</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td>Sat</td>
+                <td>Sun</td>
+            </tr>
+        </thead>
+        <tr>
+            <td colspan="6"></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>31</td>
+            <td colspan="5"></td>
+        </tr>
+        <tfoot>
+            <td colspan="3" style="text-align: left;"><a href="#">July</a></td>
+            <td> </td>
+            <td colspan="3" style="text-align: right;"><a href="#">Sept</a></td>
+        </tfoot>
+    </table>
+    <div class="form-class">
+        <form action="">
+            <fieldset>
+                <label for="Legend">--Client Form--</label>
+                <br>
+                <br>
+                <label for="Client Name">Client Name: </label>
+                <input type="text" name="Client_name" id="Client_name" placeholder="Enter Client Name">
+                <br>
+                <label for="Meeting">Meeting</label>
+                <input type="radio" name="First Time" id="First_time">First Time
+                <input type="radio" name="Old Client" id="Old_client">Old Client
+                <br>
+                <label for="Client Type">Client Type</label>
+                <input type="radio" name="School" id="School">School
+                <input type="radio" name="College" id="College">College
+                <input type="radio" name="Graduate" id="Graduate">Graduate
+                <br>
+                <label for="Meeting_date">Meeting Date</label>
+                <input type="date" name="Meeting_date" id="Meeting_date">
+                <input type="submit" value="Submit" id="submit">    
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
