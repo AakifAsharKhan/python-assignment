@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="c4.css" />
+    <title>Art Store</title>
+    <style>
+        
+        body{
+    background-color: rgb(240, 237, 234);
+}
+.search,
+.table-square,.filters-square {
+  height: 70px;
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: rgba(56, 150, 238, 0.2);
+  border: 1px rgb(48, 131, 209);
+}
+.table-square {
+  height: 500px;
+  margin-top: 20px;
+}
+.content-start {
+  margin-left: 5%;
+  margin-top: 20px;
+}
+.content {
+  margin-left: 10px;
+}
+table{
+    margin: auto;
+    max-width: 500px;
+    min-width: 80%;
+    display: block;
+    border-collapse: collapse;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(213, 233, 225);
+}
+table caption{
+    display: block;
+    width: 100%;
+    /* margin: auto; */
+    background-color: rgb(212, 0, 255);
+    font-size: 24px;
+    font-weight: bold;
+}
+thead,tbody{
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid rgb(106, 0, 255);
+}
+
+tbody tr{
+    border-bottom: 1px solid rgb(64, 0, 255);
+}
+th{
+    font-size: 20px;
+}
+
+td{
+    font-size: 14px;
+}
+#title{
+
+    width: 28% ;
+    text-align: right;
+}
+#artist{
+
+    width: 27%;
+}
+#head{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+#genre{
+
+    width: 45%;
+    position: relative;
+    right: 10%;
+}
+.check{
+    width: 3%;
+}
+.image{
+    padding-top: 1%;
+    padding-left: 2%;
+    width: 10%;
+}
+.title-cell{
+    padding-left: 5%;
+    width: 18%;
+}
+.artist-cell{
+    padding-left: 3%;
+    width: 20%;
+}
+.year-cell{
+    padding-left: 3%;
+    width: 15%;
+}
+.genre-cell{
+    width: 20%;
+}
+.edit{
+ width: 13%;
+}
+
+    </style>
+  </head>
+  <body>
+      <br>
+      <br>
+      <br>
+      <h1 id="head">ART STORE</h1>
+    <form action="/" method="post">
+      <div class="search">
+        <input class="content-start" type="text" placeholder="Search Tiles" name="search"/>
+        <input class="content" type="submit" value="Search" />
+      </div>
+      <div class="filters-square">
+        <select id="actionList" class="content-start" name="actions">
+          <option value="0">Actions</option>
+          <option value="1">Archive</option>
+          <option value="2">Delete</option>
+        </select>
+        <input class="content" type="button" value="Apply" />
+        <select id="genreList" class="content" name="filter">
+          <option value="0">Genre</option>
+          <option value="1">Baroque</option>
+          <option value="2">Renaissance</option>
+          <option value="3">Realism</option>
+        </select>
+        <input class="content" type="button" value="Filter" />
+      </div>
+
+      <div class="table-square">
+          <br>
+          <br>
+          <br>
+          <br>
+          <table>
+              <caption>Paintings</caption>
+              <thead>
+                <tr>
+                   <th colspan="3" id="title">Title</th>
+                   <th id="artist">Artist</th>
+                   <th id="year">Year</th>
+                   <th colspan="2" id="genre">Genre</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="check"><input type="checkbox" name="index[0]" value="0"></td>
+                    <td class="image"><img src="images/image1.jpeg" height="40px" width="40px"  alt=""></td>
+                    <td class="title-cell">Death of Marat</td>
+                    <td class="artist-cell">David, Jacques-Louis </td>
+                    <td class="year-cell">1792</td>
+                    <td class="genre-cell">Romanticism</td>
+                    <td class="edit"><button><a href="#"><img src="images/edit.png" height="20px" width="20px" alt="">Edit</a></button></td>
+                    
+                </tr>
+                <tr>
+                    <td class="check"><input type="checkbox" name="index[1]" value="10"></td>
+                    <td class="image"><img src="images/image3.jpg" height="50px" width="40px" alt=""></td>
+                    <td class="title-cell">Portrait of Eleanor of Toledo</td>
+                    <td class="artist-cell">Bronzino, Agnolo </td>
+                    <td class="year-cell">1545</td>
+                    <td>Mannerism</td>
+                    <td class="edit"><button><a href="#"><img src="images/edit.png" height="20px" width="20px" alt="">Edit</a></button></td>
+                </tr>
+                <tr>
+                    <td class="check"><input type="checkbox" name="index[2]" value="20"></td>
+                    <td class="image"><img src="images/image4.jpg" height="40px" width="40px"  alt=""></td>
+                    <td class="title-cell">Liberty Leading the People</td>
+                    <td class="artist-cell">Deloroix, Euean</td>
+                    <td class="year-cell">1920</td>
+                    <td class="genre-cell">Romanticism</td>
+                    <td class="edit"><button><a href="#"><img src="images/edit.png" height="20px" width="20px" alt="">Edit</a></button></td>
+                </tr>
+                <tr>
+                    <td class="check"><input type="checkbox" name="index[3]" value="30"></td>
+                    <td class="image"><img src="images/image5.jpg" height="40px" width="40px"  alt=""></td>
+                    <td class="title-cell">Arrangement in Grey and Black</td>
+                    <td class="artist-cell">Whistler James Abbott   </td>
+                    <td class="year-cell">1877</td>
+                    <td class="genre-cell">Realism</td>
+                    <td class="edit"><button><a href="#"><img src="images/edit.png" height="20px" width="20px" alt="">Edit</a></button></td>
+                </tr>
+                <tr>
+                    <td class="check"><input type="checkbox" name="index[4]" value="40"></td>
+                    <td class="image"><img src="images/image1.jpeg" height="40px" width="40px"  alt=""></td>
+                    <td class="title-cell">Mademoiselle Caroline Riviere</td>
+                    <td class="artist-cell">Ingres, Jean-Auguste</td>
+                    <td class="year-cell">1805</td>
+                    <td class="genre-cell">Neo-Classism</td>
+                    <td class="edit"><button><a href="#"><img src="images/edit.png" height="20px" width="20px" alt="">Edit</a></button></td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+    </form>
+  </body>
+</html>
+
